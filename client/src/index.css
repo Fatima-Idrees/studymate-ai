@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+@theme {
+  /* Color tokens */
+  --color-paper: #faf8f5;
+  --color-paper-dim: #f0ede7;
+  --color-ink: #1c1917;
+  --color-ink-soft: #57534e;
+  --color-primary: #3730a3;
+  --color-primary-dim: #4338ca;
+  --color-primary-soft: #e0e1f9;
+  --color-accent: #7c3aed;
+  --color-accent-soft: #f1e9fd;
+  --color-success: #15803d;
+  --color-success-soft: #dcfce7;
+  --color-warning: #b45309;
+  --color-warning-soft: #fef3c7;
+  --color-danger: #b91c1c;
+  --color-danger-soft: #fee2e2;
+  --color-line: #e7e3db;
+
+  /* Type */
+  --font-display: "Lexend", "Inter", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+  }
+
+  /* Visible keyboard focus everywhere */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible,
+  [tabindex]:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* Signature element: marks any block of AI-generated content with a
+     consistent visual language distinct from the student's own data. */
+  .ai-block {
+    position: relative;
+    border-left: 3px solid var(--color-accent);
+    background: var(--color-accent-soft);
+    border-radius: 0.5rem;
+    padding: 1rem 1.25rem 1rem 1.5rem;
+  }
+
+  .ai-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    font-weight: 600;
+  }
+
+  .card {
+    background: white;
+    border: 1px solid var(--color-line);
+    border-radius: 0.75rem;
+  }
+
+  .btn-primary {
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: background-color 150ms ease;
+  }
+  .btn-primary:hover {
+    background-color: var(--color-primary-dim);
+  }
+  .btn-primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .btn-secondary {
+    background-color: white;
+    color: var(--color-ink);
+    border: 1px solid var(--color-line);
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: background-color 150ms ease;
+  }
+  .btn-secondary:hover {
+    background-color: var(--color-paper-dim);
+  }
+
+  .input-field {
+    width: 100%;
+    border: 1px solid var(--color-line);
+    border-radius: 0.5rem;
+    padding: 0.625rem 0.875rem;
+    background: white;
+    color: var(--color-ink);
+    transition: border-color 150ms ease;
+  }
+  .input-field:focus {
+    border-color: var(--color-primary);
+    outline: none;
+  }
+}

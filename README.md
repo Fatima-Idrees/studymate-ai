@@ -128,24 +128,6 @@ cd ../client
 npm install
 ```
 
----
-
-# 🔐 Environment Variables
-
-Create a `.env` file inside the server directory.
-
-```env
-PORT=5000
-
-MONGO_URI=your_mongodb_connection_string
-
-JWT_SECRET=your_secret_key
-
-GEMINI_API_KEY=your_google_gemini_api_key
-```
-
----
-
 # ▶️ Run the Project
 
 ## Backend
@@ -259,27 +241,3 @@ POST /api/ai/chat
 
 ---
 
-# 📸 Screenshots
-
-Add screenshots of:
-
-- Login Page
-- Dashboard
-- AI Summary
-- Quiz Generator
-- Flashcards
-- AI Chat
-- Progress Dashboard
-
----
-
-
----
-
-# 📄 License
-
-This project is licensed under the MIT License.
-
----
-
-⭐ If you found this project helpful, please consider giving it a star.

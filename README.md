@@ -99,7 +99,7 @@ AI-Study-Platform/
 ## Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/AI-Study-Platform.git
+git clone https://github.com/Fatima-Idrees/studymate-ai.git
 ```
 
 ---
@@ -107,7 +107,7 @@ git clone https://github.com/yourusername/AI-Study-Platform.git
 ## Navigate
 
 ```bash
-cd AI-Study-Platform
+cd studymate-ai
 ```
 
 ---
